@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Latino Ipsum</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Latino Ipsum">
+  <meta name="Description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FACEBOOK -->
+  <meta property="og:type" content="Latino Ipsum">
+  <meta property="og:title" content="Latino Ipsum">
+  <meta property="og:image" content="/assets/images/share.png">
+  <meta property="og:site_name" content="Latino Ipsum">
+  <meta property="og:description" content="Description">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@latinoipsum">
+  <meta name="twitter:creator" content="@latinoipsum">
+  <meta name="twitter:title" content="Latino Ipsum">
+  <meta name="twitter:description" content="Description">
+  <meta name="twitter:image:src" content="/assets/images/share.png">
+  
+  <link rel="stylesheet" href="/assets/css/goya.css">
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+  
+  <div class="latinoipsum">
+    <header>
+      <img src="/assets/images/banderas.png" alt="Flags">
+      <!-- <h1>Latino Ipsum</h1> -->
+      <img src="/assets/images/logo.svg" alt="Latino Ipsum Logo" class="logo">
+      <h2>Es como Lorem Ipsum, pero tiene <span>sazón.</span></h2>
+    </header>
+    <aside>
+      <h3>${siteCopy.paragraphsLabel[idioma]}</h3>
+      <div class="paragraph-count">
+        <button class="form-button" @click="decrementParagraphCount()">
+          <svg width="15" height="4" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.600098" y="0.400024" width="14" height="2.8" fill="#C4C4C4" />
+          </svg>
+        </button>
+        <span class="ts-adobo">${paragraphCount}</span>
+        <button class="form-button" @click="incrementParagraphCount()">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5.6001" width="2.8" height="14" fill="#C4C4C4" />
+            <rect y="8.40002" width="2.8" height="14" transform="rotate(-90 0 8.40002)" fill="#C4C4C4" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="button-container">
+        <button @click="generateWords()">${siteCopy.buttonLabel[idioma]}</button>
+        <button class="clippy" data-clipboard-target=".output">${siteCopy.copyButtonLabel[idioma]}</button>
+      </div>
+
+      <div>
+        <h3>${siteCopy.languageLabel[idioma]}</h3>
+        <label for="idioma-es">Español</label>
+        <input type="radio" id="idioma-es" value="es" v-model="idioma" />
+        <label for="idioma-en">English</label>
+        <input type="radio" id="idioma-en" value="en" v-model="idioma" />
+      </div>
+      
+      <!-- <h3>${siteCopy.flavorLabel[idioma]}</h3>
+        <div v-for="flavor in flavorOptions">
+          <input :id="`flavor-${flavor.value}`" type="checkbox" v-model="selectedFlavors" :value="flavor.value">
+          <label :for="`flavor-${flavor.value}`">${flavor.label[idioma]}</label>
+        </div> -->
+        <!-- ${selectedFlavors} -->
+    </aside>
+      
+    <main class="output">
+      <div class="notification" :class="{active: copyNotification}">${siteCopy.copyNotificationLabel[idioma]}</div>
+      <span class="placeholder" :class="{visible: output.length == 0}">${placeholder}</span>
+      <p v-for="paragraph in output">${paragraph}</p>
+    </main>
+    
+    <footer>
+      <p>Hecho por <a href="https://twitter.com/isaachvazquez">Isaac Vazquez</a></p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+  <script src="/assets/js/goya.js"></script>
+</body>
+</html>

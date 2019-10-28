@@ -1,0 +1,11 @@
+{
+  "name": "latino-ipsum",
+  "scripts": {
+    "start": "eleventy --config=_eleventy/config.js --serve",
+    "build": "eleventy --config=_eleventy/config.js",
+    "dryrun": "eleventy --dryrun --config=_eleventy/config.js"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}

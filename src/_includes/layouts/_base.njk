@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% if title and page.fileSlug != '' %}{{ title }} - {% endif %}{{ site.title }}</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="{{site.title}}">
+  <meta name="Description" content="{{site.description}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FACEBOOK -->
+  <meta property="og:type" content="Latino Ipsum">
+  <meta property="og:title" content="{{site.title}}">
+  <meta property="og:image" content="{{site.share_image}}">
+  <meta property="og:site_name" content="{{site.title}}">
+  <meta property="og:description" content="{{site.description}}">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@latinoipsum">
+  <meta name="twitter:creator" content="@latinoipsum">
+  <meta name="twitter:title" content="{{site.title}}">
+  <meta name="twitter:description" content="{{site.description}}">
+  <meta name="twitter:image:src" content="{{site.share_image}}">
+  
+  <link rel="stylesheet" href="/assets/css/goya.css">
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+  {% block main %}{% endblock %}
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+  <script src="/assets/js/goya.js"></script>
+</body>
+</html>
