@@ -34,7 +34,6 @@
   <div class="latinoipsum">
     <header>
       <img src="/assets/images/banderas.png" alt="Flags">
-      <!-- <h1>Latino Ipsum</h1> -->
       <img src="/assets/images/logo.svg" alt="Latino Ipsum Logo" class="logo">
       <h2>Es como Lorem Ipsum, pero tiene <span>sazón.</span></h2>
     </header>
@@ -76,10 +75,12 @@
         <!-- ${selectedFlavors} -->
     </aside>
       
-    <main class="output">
+    <main>
       <div class="notification" :class="{active: copyNotification}">${siteCopy.copyNotificationLabel[idioma]}</div>
       <span class="placeholder" :class="{visible: output.length == 0}">${placeholder}</span>
-      <p v-for="paragraph in output">${paragraph}</p>
+      <div class="output">
+        <p v-for="paragraph in output">${paragraph}</p>
+      </div>
     </main>
     
     <footer>
