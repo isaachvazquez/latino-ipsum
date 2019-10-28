@@ -331,6 +331,7 @@
       // State
       copyNotification: false,
       idioma: 'es', // english or espanol
+      isMounted: false
     },
     methods: {
       generateWords: function() {
@@ -387,6 +388,7 @@
       // Fetch data and assign to this.palabras
     },
     mounted() {
+      this.isMounted = true;
       var clipboard = new ClipboardJS('.clippy');
       const vue = this;
 

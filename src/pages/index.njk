@@ -4,7 +4,7 @@ permalink: /index.html
 {% extends 'layouts/_base.njk' %}
 
 {% block main %}
-  <div class="latinoipsum">
+  <div class="latinoipsum" :class="{mounted: isMounted}">
     <header>
       <img src="/assets/images/banderas.png" alt="Flags">
       <img src="/assets/images/logo.svg" alt="Latino Ipsum Logo" class="logo">
