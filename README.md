@@ -2,7 +2,7 @@
 
 ## Your source for latino ipsum text.
 
-> Source files for [latinoipsum.com](https://latinoipsum.com) built with Eleventy and hosted with Netlify.
+> Source files for [latinoipsum.netlify.com](https://latinoipsum.netlify.com) built with Eleventy and hosted with Netlify.
 
 ## Development
 
